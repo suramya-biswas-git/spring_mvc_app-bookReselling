@@ -1,0 +1,41 @@
+1. create  database bookDB;
+2. create table Book
+     (
+        book_id int(6),
+        book_name varchar(30) not null,
+        author varchar(30) not null,
+        description varchar(30) not null,
+        price  double(10,2) not null,
+        primary key(book_id)
+      );
+insert into book values(1001,'Ramayan','Valmiki','Epic',250.00),(1002,'Mahabharat','Vyas','Epic',350.00),(1003,'Geetanjali','Tagore','Poetry',300.00);
+insert into book values(1004,'Sakuntala','Kalidasa','Poetry',200.00),(1005,'War & Peace','Tolstoy','Novel',400.00),(1006,'Robroy','Scott','Novel',100.00);
+
+insert into book values(1007,'Farewell Song','Tagore','Novel',275.00),(1008,'Illiad','Homer','Epic',300.00),(1009,'Easter','Yeats','Poetry',150.00);
+insert into book values(1010,'Ivanhoe','Scott','Novel',175.00),(1011,'Meghdootam','Kalidasa','Poetry',275.00),(1012,'PostOffice','Tagore','Drama',225.00)
+
+3. create table User
+     (
+        user_id int(5),
+        user_name varchar(30) not null,
+        address varchar(30) not null,
+        city varchar(15) not null,
+        pin int(6) not null,
+         state varchar(20) not null,
+         email varchar(30) not null,
+        password varchar(30) not null,
+        mobile int(11) not null,
+        primary key(user_id)
+      );
+
+
+4. create table book_order
+     (
+        order_id int(10),
+        user_id int(5),
+        book_id int(6),
+        order_amount double(10,2),
+        primary key(order_id)
+      ); 
+
+   
